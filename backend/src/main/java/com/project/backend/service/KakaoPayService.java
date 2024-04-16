@@ -1,4 +1,3 @@
-
 package com.project.backend.service;
 
 import com.project.backend.dto.KakaoApproveResponse;
@@ -36,7 +35,6 @@ public class KakaoPayService {
 
     public String kakaoPayReady(String amount) { //결제 준비
         // Server Request Body : 서버 요청 본문
-        log.info("상품 가격: " + amount);
         Map<String, String> params = new HashMap<>();
         params.put("cid", cid); // 가맹점 코드 - 테스트용
         params.put("partner_order_id", "1001"); // 주문 번호
