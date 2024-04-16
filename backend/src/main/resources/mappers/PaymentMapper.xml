@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.project.backend.mappers.PaymentMapper">
+    <insert id="insertPayment" parameterType="com.project.backend.dto.KakaoApproveResponse">
+        INSERT INTO project.kakaopay(aid, tid, cid, partner_order_id, partner_user_id, item_name, amount, created_at,
+                                     approved_at)
+        VALUES (#{aid}, #{tid}, #{cid}, #{partner_order_id}, #{partner_user_id}, #{item_name}, #{amount},
+                #{created_at}, #{approved_at})
+    </insert>
+
+</mapper>
