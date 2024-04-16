@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 spring:
   datasource:
     url: jdbc:mariadb://donkey-rds.cnohqzdklodx.ap-northeast-2.rds.amazonaws.com:3306/project
@@ -10,4 +11,18 @@ spring:
 
 mybatis:
   mapper-locations: classpath:/mappers/**/*.xml
+=======
+spring:
+  datasource:
+    url: jdbc:mariadb://donkey-rds.cnohqzdklodx.ap-northeast-2.rds.amazonaws.com:3306/project
+    username: nana
+    password: nana1234
+    driverClassName: org.mariadb.jdbc.Driver
+  mvc:
+    view:
+      prefix: /resources/templates
+
+mybatis:
+  mapper-locations: classpath:/mappers/**/*.xml
+>>>>>>> 989e561bdbf64c91f6c3438e739a83d12f1f2f64
   configuration.map-underscore-to-camel-case: true

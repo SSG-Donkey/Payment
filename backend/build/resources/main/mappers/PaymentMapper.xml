@@ -7,5 +7,4 @@
         VALUES (#{aid}, #{tid}, #{cid}, #{partner_order_id}, #{partner_user_id}, #{item_name}, #{amount},
                 #{created_at}, #{approved_at})
     </insert>
-
 </mapper>

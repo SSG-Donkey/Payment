@@ -9,7 +9,7 @@ import lombok.Setter;
 import lombok.extern.java.Log;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.ui.Model;
+
 import java.io.IOException;
 
 @RestController
@@ -22,7 +22,7 @@ public class KakaoPayController {
 
     //결제 요청
     @PostMapping("/ready")
-    public void readyToKakaoPay(HttpServletResponse response, HttpServletRequest request ) {
+    public void readyToKakaoPay(HttpServletResponse response, HttpServletRequest request) {
         log.info("payment/ready 진입");
         try {
             response.sendRedirect(kakaoPay.kakaoPayReady(request.getParameter("amount")));
