@@ -86,7 +86,7 @@ jobs:
         env:
           IMAGE_URI: ${{ env.IMAGE_URI }}
           
-       - name: Delete old ReplicaSet
+      - name: Delete old ReplicaSet
         run: |
           kubectl delete replicaset -l app=board --namespace=default
         env:
