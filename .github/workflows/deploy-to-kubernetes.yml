@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: Checkout source code
         uses: actions/checkout@v2
-
+      
       - name: Set up JDK 17 with Zulu
         uses: actions/setup-java@v2
         with:
@@ -63,24 +63,25 @@ jobs:
           token: ${{ secrets.ACTION_TOKEN }}
           path: k8s-manifest-repo
 
-      - name: Update payment-deployment.yaml with new image tag
-        run: |
-          sed -i "s|donkey-payment:.*|donkey-payment:${{ env.TAG_NAME }}|" ./base/payment-deployment.yaml
-        working-directory: ${{ github.workspace }}/k8s-manifest-repo
-        env:
-          TAG_NAME: ${{ env.TAG_NAME }}
-
       - name: Setup Git identity
         run: |
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
         working-directory: ${{ github.workspace }}/k8s-manifest-repo
 
+      - name: Update payment-deployment.yaml with new image URI and tag
+        run: |
+          sed -i "s|image: .*|image: $IMAGE_URI|" ./base/payment-deployment.yaml
+          cat ./base/payment-deployment.yaml # For debugging purposes
+        working-directory: ${{ github.workspace }}/k8s-manifest-repo
+        env:
+          IMAGE_URI: ${{ env.IMAGE_URI }}
+
       - name: Commit and push the updated payment-deployment.yaml
         run: |
           git add base/payment-deployment.yaml
-          git commit -m "Update image tag for donkey-payment to ${{ env.TAG_NAME }}"
+          git commit -m "Update image URI for donkey-payment to $IMAGE_URI"
           git push
         working-directory: ${{ github.workspace }}/k8s-manifest-repo
         env:
-          TAG_NAME: ${{ env.TAG_NAME }}
+          IMAGE_URI: ${{ env.IMAGE_URI }}
