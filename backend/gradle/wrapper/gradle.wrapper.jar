@@ -1,0 +1,2 @@
+// https://mvnrepository.com/artifact/org.gradle/gradle-wrapper
+runtimeOnly group: 'org.gradle', name: 'gradle-wrapper', version: '5.2.1'
