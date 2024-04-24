@@ -36,8 +36,10 @@ public class KakaoPayController {
     public KakaoApproveResponse afterPayRequest(@RequestParam("pg_token") String pgToken) {
         log.info("payment/success 진입");
         KakaoApproveResponse kakaoApprove = kakaoPay.kakaoPayApprove(pgToken);
+
         // 결제가 이루어진 경우 데이터베이스에 관련정보 입력
         if (kakaoApprove != null) {
+            kakaoApprove.setTotal(kakaoApprove.getAmount().getTotal());
             kakaoPay.insert(kakaoApprove);
             log.info("insert 완료");
         }

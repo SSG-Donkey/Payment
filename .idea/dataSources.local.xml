@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal" created-in="IU-233.15026.9">
-    <data-source name="project@donkey-rds.cnohqzdklodx.ap-northeast-2.rds.amazonaws.com" uuid="8d294d8a-b3c7-4e1d-b03f-cfee5496ad49">
-      <database-info product="MariaDB" version="10.11.6-MariaDB-log" jdbc-version="4.2" driver-name="MariaDB Connector/J" driver-version="3.0.7" dbms="MARIADB" exact-version="10.11.6" exact-driver-version="3.0">
+    <data-source name="AWS driver for Aurora MySQL" uuid="15827d73-5b23-4155-aa52-3843c9ec8d13">
+      <database-info product="MySQL" version="5.5.5-10.11.6-MariaDB-log" jdbc-version="4.2" driver-name="Amazon Web Services (AWS) JDBC Driver for MySQL" driver-version="aws-mysql-connector-java-1.1.9 (Revision: 122bff765e786a47605d9586910f911cb87f3733)" dbms="MARIADB" exact-version="10.11.6" exact-driver-version="1.1">
         <extra-name-characters>#@</extra-name-characters>
         <identifier-quote-string>`</identifier-quote-string>
       </database-info>

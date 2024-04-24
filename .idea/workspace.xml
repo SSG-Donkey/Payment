@@ -4,7 +4,40 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="20c9f562-5c97-4f74-96f2-283284e493b6" name="Changes" comment="" />
+    <list default="true" id="20c9f562-5c97-4f74-96f2-283284e493b6" name="Changes" comment="payment commit">
+      <change afterPath="$PROJECT_DIR$/backend/src/main/resources/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.gradle/8.7/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.gradle/8.7/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.gradle/8.7/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.gradle/8.7/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.gradle/8.7/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.gradle/8.7/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.gradle/8.7/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.gradle/8.7/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.gradle/8.7/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.gradle/8.7/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.gradle/8.7/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.gradle/8.7/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.gradle/8.7/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.gradle/8.7/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.gradle/8.7/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.gradle/8.7/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/classes/java/main/com/project/backend/controller/KakaoPayController.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/build/classes/java/main/com/project/backend/controller/KakaoPayController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/classes/java/main/com/project/backend/dto/Amount.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/build/classes/java/main/com/project/backend/dto/Amount.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/classes/java/main/com/project/backend/dto/KakaoApproveResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/build/classes/java/main/com/project/backend/dto/KakaoApproveResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/classes/java/main/com/project/backend/service/KakaoPayService.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/build/classes/java/main/com/project/backend/service/KakaoPayService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/classes/java/main/com/project/backend/service/KakaoReadyResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/resources/main/mappers/PaymentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/build/resources/main/mappers/PaymentMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/resources/main/templates/payment.html" beforeDir="false" afterPath="$PROJECT_DIR$/backend/build/resources/main/templates/payment.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/tmp/compileJava/compileTransaction/stash-dir/PaymentController.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/backend/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/backend/controller/KakaoPayController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/project/backend/controller/KakaoPayController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/backend/dto/Amount.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/project/backend/dto/Amount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/backend/dto/KakaoApproveResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/project/backend/dto/KakaoApproveResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/backend/service/KakaoPayService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/project/backend/service/KakaoPayService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/mappers/PaymentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/mappers/PaymentMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/templates/payment.html" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/templates/payment.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/project/backend/BackendApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/com/project/backend/BackendApplicationTests.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,12 +59,18 @@
             <expand>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="backend" type="f1a62948:ProjectNode" />
+                <item name="payment" type="f1a62948:ProjectNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="backend" type="f1a62948:ProjectNode" />
-                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+                <item name="payment" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="payment" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -75,9 +114,6 @@
       </RecentBranches>
     </option>
   </component>
-  <component name="GithubDefaultAccount">
-    <option name="defaultAccountId" value="12444e34-198c-4d8f-a04a-5e665fc5c674" />
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -101,6 +137,7 @@
     "DefaultHtmlFileTemplate": "HTML File",
     "Downloaded.Files.Path.Enabled": "false",
     "Gradle.Build backend.executor": "Run",
+    "Gradle.backend [bootJar].executor": "Run",
     "JavaScript Debug.kakaoPage.html (1).executor": "Run",
     "JavaScript Debug.kakaoPage.html.executor": "Run",
     "JavaScript Debug.kakaoPay.html.executor": "Run",
@@ -116,10 +153,10 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Spring Boot.BackendApplication.executor": "Run",
     "deletionFromPopupRequiresConfirmation": "false",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/TECH3-25/IdeaProjects",
+    "last_opened_file_path": "C:/Users/TECH3-25/IdeaProjects/SHINSEGAE-final/backend/gradle/wrapper",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -128,7 +165,7 @@
     "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -151,15 +188,42 @@
       <recent name="C:\Users\TECH3-25\IdeaProjects\SHINSEGAE-final\backend\src\main\resources\template" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.BackendApplication">
+    <configuration name="backend [bootJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/backend" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="bootJar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="BackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
-      <module name="backend.main" />
+      <module name="payment.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.project.backend.BackendApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.backend [bootJar]" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -180,7 +244,18 @@
       <workItem from="1712879466197" duration="27887000" />
       <workItem from="1713140221562" duration="12452000" />
       <workItem from="1713168421499" duration="2517000" />
-      <workItem from="1713225938055" duration="22514000" />
+      <workItem from="1713225938055" duration="24890000" />
+      <workItem from="1713311772448" duration="13615000" />
+      <workItem from="1713330574014" duration="55000" />
+      <workItem from="1713330668540" duration="3647000" />
+      <workItem from="1713398678332" duration="36000" />
+      <workItem from="1713399444809" duration="208000" />
+      <workItem from="1713400940704" duration="267000" />
+      <workItem from="1713401689942" duration="748000" />
+      <workItem from="1713405175618" duration="90000" />
+      <workItem from="1713405400900" duration="90000" />
+      <workItem from="1713406059519" duration="699000" />
+      <workItem from="1713945787984" duration="1565000" />
     </task>
     <servers />
   </component>
@@ -263,6 +338,50 @@
     {
       "branch": "main",
       "currentBranchFilter": true
+    },
+    {
+      "branch": "main",
+      "currentBranchFilter": true
+    },
+    {
+      "branch": "main",
+      "currentBranchFilter": true
+    },
+    {
+      "branch": "main",
+      "currentBranchFilter": true
+    },
+    {
+      "branch": "main",
+      "currentBranchFilter": true
+    },
+    {
+      "branch": "main",
+      "currentBranchFilter": true
+    },
+    {
+      "branch": "main",
+      "currentBranchFilter": true
+    },
+    {
+      "branch": "main",
+      "currentBranchFilter": true
+    },
+    {
+      "branch": "main",
+      "currentBranchFilter": true
+    },
+    {
+      "branch": "main",
+      "currentBranchFilter": true
+    },
+    {
+      "branch": "main",
+      "currentBranchFilter": true
+    },
+    {
+      "branch": "main",
+      "currentBranchFilter": true
     }
   ],
   "lastFilter": {
@@ -277,6 +396,11 @@
           <properties class="java.lang.IllegalArgumentException" package="java.lang" />
           <option name="timeStamp" value="4" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/backend/build.gradle</url>
+          <line>25</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

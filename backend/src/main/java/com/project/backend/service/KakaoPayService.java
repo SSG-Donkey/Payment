@@ -10,7 +10,6 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.ui.Model;
 import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 
@@ -42,7 +41,7 @@ public class KakaoPayService {
         params.put("item_name", "포인트"); // 상품 명
         params.put("quantity", amount); // 상품 수량
         params.put("total_amount", amount); // 상품 총액
-        params.put("tax_free_amount", "200"); // 상품 비과세 금액
+        params.put("tax_free_amount", "0"); // 상품 비과세 금액
         params.put("approval_url", "http://localhost:8080/kakao/success");
         params.put("cancel_url", "https://developers.kakao.com/cancel");
         params.put("fail_url", "https://developers.kakao.com/fail");
@@ -93,7 +92,7 @@ public class KakaoPayService {
         HttpHeaders headers = new HttpHeaders();
         headers.add("Host", host);
         headers.add("Authorization", "SECRET_KEY " + kakaoAdminKey);
-        headers.add("Content-Type", "application/json");
+        headers.add("Content-Type", "application/json;charset=UTF-8");
         log.info("header value : " + headers);
         return headers;
     }
