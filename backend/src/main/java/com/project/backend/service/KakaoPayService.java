@@ -43,8 +43,8 @@ public class KakaoPayService {
         params.put("total_amount", amount); // 상품 총액
         params.put("tax_free_amount", "0"); // 상품 비과세 금액
         params.put("approval_url", "http://localhost:8080/kakao/success");
-        params.put("cancel_url", "https://developers.kakao.com/cancel");
-        params.put("fail_url", "https://developers.kakao.com/fail");
+        params.put("cancel_url", "https://localhost:8080/kakao/cancel");
+        params.put("fail_url", "https://localhost:8080/kakao/fail");
         log.info("parameter value : " + params);
 
         // 헤더와 바디 붙이기

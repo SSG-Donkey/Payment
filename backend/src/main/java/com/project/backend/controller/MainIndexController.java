@@ -10,6 +10,6 @@ public class MainIndexController {
     @GetMapping("/")
     public String kakaoPayGet() {
         log.info("결제 페이지 진입");
-        return "index";
+        return "index.html";
     }
 }
