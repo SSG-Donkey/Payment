@@ -12,18 +12,19 @@ jobs:
       - name: Checkout source code
         uses: actions/checkout@v2
       
-      - name: Set up JDK 17 with Zulu
+      - name: Set up JDK 17 with Oracle JDK
         uses: actions/setup-java@v2
         with:
           java-version: '17'
-          distribution: 'zulu'
+          distribution: 'adopt'
 
       - name: Set executable permission for gradlew
         run: chmod +x ./gradlew
         working-directory: ./backend
 
       - name: Set Jasypt Encryptor Password
-        run: echo "jasypt.encryptor.password=${{ secrets.JASYPT_ENCRYPTOR_PASSWORD }}" >> ./src/main/resources/application.properties
+        run: |
+          printf "\njasypt.encryptor.password=${{ secrets.JASYPT_ENCRYPTOR_PASSWORD }}" >> ./src/main/resources/application.properties
         working-directory: ./backend
 
       - name: Build with Gradle
@@ -76,7 +77,7 @@ jobs:
         working-directory: ${{ github.workspace }}/k8s-manifest-repo
         env:
           IMAGE_URI: ${{ env.IMAGE_URI }}
-
+      
       - name: Commit and push the updated payment-deployment.yaml
         run: |
           git add base/payment-deployment.yaml
@@ -85,9 +86,23 @@ jobs:
         working-directory: ${{ github.workspace }}/k8s-manifest-repo
         env:
           IMAGE_URI: ${{ env.IMAGE_URI }}
-          
-      - name: Delete old ReplicaSet
+
+      - name: Compress all report files
+        if: ${{ failure() }}
         run: |
-          kubectl delete replicaset -l app=board --namespace=default
-        env:
-          KUBECONFIG: ${{ secrets.KUBECONFIG_SECRET_NAME }}
+          echo "Compressing all report files..."
+          TIMESTAMP=$(date +%Y%m%d_%H%M%S)
+          mkdir -p report_files/backend/tests
+          REPORT_DIRS=$(find . -type d -path '*/build/reports/tests/test')
+          for dir in $REPORT_DIRS; do
+            module_path=$(echo $dir | awk -F'/build/' '{print $1}' | cut -c 3-)
+            cp -r $dir report_files/$module_path/$(basename $(dirname $dir))
+          done
+          tar czvf report_files_$TIMESTAMP.tar.gz report_files
+
+      - name: Upload Error Report Files To Artifacts
+        if: ${{ failure() }}
+        uses: actions/upload-artifact@v2
+        with:
+          name: report_files
+          path: report_files_*.tar.gz
