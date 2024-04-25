@@ -88,6 +88,6 @@ jobs:
           
       - name: Delete old ReplicaSet
         run: |
-          kubectl delete replicaset -l app=board --namespace=default
+          kubectl delete replicaset -l app=payment --namespace=default
         env:
           KUBECONFIG: ${{ secrets.KUBECONFIG_SECRET_NAME }}
