@@ -1,3 +1,5 @@
+/.idea/
 backend/src/main/resources/application.property
-.idea/
 .git/
+/.vscode/
+/backend/.gradle/
