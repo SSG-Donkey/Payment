@@ -16,7 +16,7 @@ import java.io.IOException;
 @RequestMapping("/kakao")
 @RequiredArgsConstructor
 @Log
-public class KakaoPayController {
+public class    KakaoPayController {
     @Setter(onMethod_ = @Autowired)
     private KakaoPayService kakaoPay;
 
