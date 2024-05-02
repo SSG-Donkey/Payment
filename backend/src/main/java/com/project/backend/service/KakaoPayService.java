@@ -42,9 +42,9 @@ public class KakaoPayService {
         params.put("quantity", amount); // 상품 수량
         params.put("total_amount", amount); // 상품 총액
         params.put("tax_free_amount", "0"); // 상품 비과세 금액
-        params.put("approval_url", "http://localhost:8080/kakao/success");
-        params.put("cancel_url", "https://localhost:8080/kakao/cancel");
-        params.put("fail_url", "https://localhost:8080/kakao/fail");
+        params.put("approval_url", "https://www.dangnagwi.store/kakao/success");
+        params.put("cancel_url", "https://www.dangnagwi.store/kakao/cancel");
+        params.put("fail_url", "https://www.dangnagwi.store/kakao/fail");
         log.info("parameter value : " + params);
 
         // 헤더와 바디 붙이기

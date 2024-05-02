@@ -2,5 +2,5 @@
 backend/src/main/resources/application.property
 .git/
 /.vscode/
-/backend/.gradle/
-/backend/build/
+backend/.gradle/
+backend/build/
