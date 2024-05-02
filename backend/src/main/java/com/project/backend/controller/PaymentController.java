@@ -1,13 +1,20 @@
 package com.project.backend.controller;
 //import io.micrometer.common.util.StringUtils;
 
+import com.project.backend.service.KakaoPayService;
+import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
+import lombok.Setter;
 import lombok.extern.java.Log;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import java.io.IOException;
 
 @Controller
 @RequestMapping("/payment")
@@ -15,22 +22,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Log
 public class PaymentController {
     //결제 페이지
-    @GetMapping("")
-    public String payment() {
-        log.info("payment.......");
-        return "payment"; // 결제 페이지 뷰 이름
-    }
-
+    @Setter(onMethod_ = @Autowired)
+    KakaoPayService kakapay;
     @PostMapping("")
-    public String preparePayment(Integer amount, String paymentMethod, Model model) {
-        System.out.print("요청옴 \n");
-        System.out.printf("%d, %s\n", amount, paymentMethod);
-        model.addAttribute("amount", amount);
-        model.addAttribute("method", paymentMethod);
-
+    public String preparePayment(@RequestParam String amount, String paymentMethod, HttpServletResponse response) {
         if ("kakaopay".equals(paymentMethod)) {
             log.info("kakaopay 결제...........");
-            return "redirect:/kakao/ready";
+            try {
+                response.sendRedirect(kakapay.kakaoPayReady(amount));
+            } catch (IOException e) {
+                log.info("RuntimeException : " + e);
+            }
         }
         if ("tosspay".equals(paymentMethod)) {
 
