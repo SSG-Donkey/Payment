@@ -32,12 +32,12 @@ public class KakaoPayService {
     private final PaymentMapper paymentmapper;
 
 
-    public String kakaoPayReady(String amount) { //결제 준비
+    public String kakaoPayReady(String amount,String user_no) { //결제 준비
         // Server Request Body : 서버 요청 본문
         Map<String, String> params = new HashMap<>();
         params.put("cid", cid); // 가맹점 코드 - 테스트용
         params.put("partner_order_id", "1001"); // 주문 번호
-        params.put("partner_user_id", "goguma"); // 회원 아이디
+        params.put("partner_user_id", user_no); // 회원 아이디
         params.put("item_name", "포인트"); // 상품 명
         params.put("quantity", amount); // 상품 수량
         params.put("total_amount", amount); // 상품 총액
