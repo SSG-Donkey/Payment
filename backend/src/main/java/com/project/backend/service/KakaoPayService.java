@@ -3,6 +3,7 @@ package com.project.backend.service;
 import com.project.backend.dto.KakaoApproveResponse;
 import com.project.backend.dto.KakaoReadyResponse;
 import com.project.backend.mappers.PaymentMapper;
+import com.project.backend.mappers.UserMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.java.Log;
 import org.springframework.beans.factory.annotation.Value;
@@ -30,22 +31,25 @@ public class KakaoPayService {
     private KakaoReadyResponse kakaoPayReady;
     private KakaoApproveResponse kakaoPayApprove;
     private final PaymentMapper paymentmapper;
-    private String userNo;
+    private final UserMapper UserMapper;
+    private String userNickname;
+    private String pluspoint;
 
-    public String kakaoPayReady(String amount,String user_no) { //결제 준비
+    public String kakaoPayReady(String amount,String usernickname) { //결제 준비
         // Server Request Body : 서버 요청 본문
-        userNo=user_no;
+        userNickname=usernickname;
+        pluspoint=amount;
         Map<String, String> params = new HashMap<>();
         params.put("cid", cid); // 가맹점 코드 - 테스트용
         params.put("partner_order_id", "1001"); // 주문 번호
-        params.put("partner_user_id", userNo); // 회원 아이디
+        params.put("partner_user_id", usernickname); // 회원 아이디
         params.put("item_name", "포인트"); // 상품 명
         params.put("quantity", amount); // 상품 수량
         params.put("total_amount", amount); // 상품 총액
         params.put("tax_free_amount", "0"); // 상품 비과세 금액
-        params.put("approval_url", "https://www.dangnagwi.store/success");
-        params.put("cancel_url", "https://www.dangnagwi.store/cancel");
-        params.put("fail_url", "https://www.dangnagwi.store/fail");
+        params.put("approval_url", "http://localhost:8080/paymentSuccess.html");
+        params.put("cancel_url", "http://localhost:8080/kakao/cancel");
+        params.put("fail_url", "http://localhost:8080/kakao/fail");
         log.info("parameter value : " + params);
 
         // 헤더와 바디 붙이기
@@ -69,7 +73,7 @@ public class KakaoPayService {
         params.put("cid", cid); //가맹점 코드 - 테스트용
         params.put("tid", kakaoPayReady.getTid()); //결제 고유번호 - kakaoPayReady() 실행시 생성
         params.put("partner_order_id", "1001"); // 주문번호
-        params.put("partner_user_id", userNo); // 회원 아이디
+        params.put("partner_user_id", userNickname); // 회원 아이디
         params.put("pg_token", pgToken); //TID와 같이 생성된 인증 토큰
         log.info("parameter value : " + params);
 
@@ -100,5 +104,11 @@ public class KakaoPayService {
 
     public int insert(KakaoApproveResponse kakaoApproveResponse) {
         return paymentmapper.insertPayment(kakaoApproveResponse);
+    }
+
+    public int update(){
+        int point = Integer.parseInt(pluspoint);
+
+        return UserMapper.updatePoint(userNickname,point);
     }
 }

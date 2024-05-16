@@ -25,7 +25,7 @@ public class    KakaoPayController {
     public void readyToKakaoPay(HttpServletResponse response, HttpServletRequest request) {
         log.info("payment/ready 진입");
         try {
-            response.sendRedirect(kakaoPay.kakaoPayReady(request.getParameter("amount"),request.getParameter("user_no")));
+            response.sendRedirect(kakaoPay.kakaoPayReady(request.getParameter("amount"),request.getParameter("user_nickname")));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -42,6 +42,7 @@ public class    KakaoPayController {
             kakaoApprove.setTotal(kakaoApprove.getAmount().getTotal());
             kakaoPay.insert(kakaoApprove);
             log.info("insert 완료");
+            kakaoPay.update();
         }
         return kakaoApprove;
     }
