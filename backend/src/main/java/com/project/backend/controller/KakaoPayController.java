@@ -35,6 +35,7 @@ public class    KakaoPayController {
     @PostMapping("/success")
     public KakaoApproveResponse afterPayRequest(@RequestBody String pgToken) {
         log.info("payment/success 진입");
+        log.info("pgToken: " + pgToken);
         KakaoApproveResponse kakaoApprove = kakaoPay.kakaoPayApprove(pgToken);
 
         // 결제가 이루어진 경우 데이터베이스에 관련정보 입력

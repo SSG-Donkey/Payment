@@ -47,7 +47,7 @@ public class KakaoPayService {
         params.put("quantity", amount); // 상품 수량
         params.put("total_amount", amount); // 상품 총액
         params.put("tax_free_amount", "0"); // 상품 비과세 금액
-        params.put("approval_url", "https://www.dangnagwi.store/paymentSuccess.html");
+        params.put("approval_url", "http://localhost:8081/paymentSuccess.html");
         params.put("cancel_url", "https://www.dangnagwi.store/kakao/cancel");
         params.put("fail_url", "https://www.dangnagwi.store/kakao/fail");
         log.info("parameter value : " + params);
@@ -88,6 +88,7 @@ public class KakaoPayService {
             log.info("RestClientException : " + e);
         } catch (URISyntaxException e) {
             log.info("URISyntaxException : " + e);
+
         }
         return kakaoPayApprove;
     }
