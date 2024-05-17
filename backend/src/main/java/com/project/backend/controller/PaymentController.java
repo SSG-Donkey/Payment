@@ -26,12 +26,12 @@ public class PaymentController {
     KakaoPayService kakapay;
 
     @PostMapping("")
-    public String preparePayment(@RequestParam String amount, String paymentMethod, HttpServletResponse response, @RequestParam String user_nickname) {
-        System.out.printf("user_no: %s\n", user_nickname);
+    public String preparePayment(@RequestParam String amount, String paymentMethod, HttpServletResponse response, @RequestParam String user_id) {
+        System.out.printf("user_id: %s\n", user_id);
         if ("kakaopay".equals(paymentMethod)) {
             log.info("kakaopay 결제...........");
             try {
-                response.sendRedirect(kakapay.kakaoPayReady(amount, user_nickname));
+                response.sendRedirect(kakapay.kakaoPayReady(amount, user_id));
             } catch (IOException e) {
                 log.info("RuntimeException : " + e);
             }
