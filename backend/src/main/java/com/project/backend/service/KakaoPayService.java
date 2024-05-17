@@ -35,10 +35,10 @@ public class KakaoPayService {
     private String userNickname;
     private String pluspoint;
 
-    public String kakaoPayReady(String amount,String usernickname) { //결제 준비
+    public String kakaoPayReady(String amount, String usernickname) { //결제 준비
         // Server Request Body : 서버 요청 본문
-        userNickname=usernickname;
-        pluspoint=amount;
+        userNickname = usernickname;
+        pluspoint = amount;
         Map<String, String> params = new HashMap<>();
         params.put("cid", cid); // 가맹점 코드 - 테스트용
         params.put("partner_order_id", "1001"); // 주문 번호
@@ -53,6 +53,7 @@ public class KakaoPayService {
         log.info("parameter value : " + params);
 
         // 헤더와 바디 붙이기
+
         HttpEntity<Map<String, String>> body = new HttpEntity<Map<String, String>>(params, this.getHeaders());
         // URL 생성 및 전송
         RestTemplate restTemplate = new RestTemplate();
@@ -107,9 +108,9 @@ public class KakaoPayService {
         return paymentmapper.insertPayment(kakaoApproveResponse);
     }
 
-    public int update(){
+    public int update() {
         int point = Integer.parseInt(pluspoint);
 
-        return UserMapper.updatePoint(userNickname,point);
+        return UserMapper.updatePoint(userNickname, point);
     }
 }

@@ -11,5 +11,5 @@ import java.util.List;
 @Mapper
 @Repository
 public interface UserMapper {
-    int updatePoint( String partner_user_id, Integer point);
+    int updatePoint(String partner_user_id, Integer point);
 }

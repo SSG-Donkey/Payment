@@ -16,7 +16,7 @@ import java.io.IOException;
 @RequestMapping("/kakao")
 @RequiredArgsConstructor
 @Log
-public class    KakaoPayController {
+public class KakaoPayController {
     @Setter(onMethod_ = @Autowired)
     private KakaoPayService kakaoPay;
 
@@ -25,7 +25,7 @@ public class    KakaoPayController {
     public void readyToKakaoPay(HttpServletResponse response, HttpServletRequest request) {
         log.info("payment/ready 진입");
         try {
-            response.sendRedirect(kakaoPay.kakaoPayReady(request.getParameter("amount"),request.getParameter("user_nickname")));
+            response.sendRedirect(kakaoPay.kakaoPayReady(request.getParameter("amount"), request.getParameter("user_nickname")));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
