@@ -25,6 +25,7 @@ public class KakaoPayController {
     public void readyToKakaoPay(HttpServletResponse response, HttpServletRequest request) {
         log.info("payment/ready 진입");
         try {
+            log.info("request amount : " + request.getParameter("amount"));
             response.sendRedirect(kakaoPay.kakaoPayReady(request.getParameter("amount"), request.getParameter("user_id")));
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -40,6 +41,7 @@ public class KakaoPayController {
 
         // 결제가 이루어진 경우 데이터베이스에 관련정보 입력
         if (kakaoApprove != null) {
+            log.info("approveTotal : " + kakaoApprove.getTotal());
             kakaoApprove.setTotal(kakaoApprove.getAmount().getTotal());
             kakaoPay.insert(kakaoApprove);
             log.info("insert 완료");

@@ -39,6 +39,7 @@ public class KakaoPayService {
         // Server Request Body : 서버 요청 본문
         userId = userid;
         pluspoint = amount;
+        log.info("KakaoPayReady Amount"+ pluspoint);
         Map<String, String> params = new HashMap<>();
         params.put("cid", cid); // 가맹점 코드 - 테스트용
         params.put("partner_order_id", "1001"); // 주문 번호
