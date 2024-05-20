@@ -33,7 +33,7 @@ public class KakaoPayService {
     private final PaymentMapper paymentmapper;
     private final UserMapper UserMapper;
     private String userId;
-    private String pluspoint;
+    private String pluspoint=null;
 
     public String kakaoPayReady(String amount, String userid) { //결제 준비
         // Server Request Body : 서버 요청 본문
