@@ -4,7 +4,7 @@
 
     <update id="updatePoint" parameterType="map">
        UPDATE user SET amount = amount+#{point}
-       WHERE user_id = #{partner_user_id}
+       WHERE user_no = #{partner_user_id}
     </update>
 
 </mapper>
